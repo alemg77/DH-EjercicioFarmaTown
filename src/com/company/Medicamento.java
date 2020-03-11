@@ -14,6 +14,17 @@ public class Medicamento {
         this.precio = precio;
     }
 
+    public void verificarAlergia ( Droga unaDroga){
+        for (Droga listaDeDrogra : listaDeDrogras) {
+            if ( listaDeDrogra.getNombre().equals(unaDroga.getNombre()))
+            {
+                System.out.println("No podes usar "+this.nombreMedicamento+" porque contiene "+unaDroga.getNombre());
+                return;
+            }
+        }
+        System.out.println("Poder usar "+this.nombreMedicamento+" sin problemas porque no tiene "+unaDroga.getNombre());
+    }
+
     public void agregarDrogra ( Droga unaDroga){
         listaDeDrogras.add(unaDroga);
     }

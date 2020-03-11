@@ -7,12 +7,16 @@ public class Main {
 
         Droga unaDroga = new Droga("Coca cola");
         Droga otraDroga = new Droga("FernetBranca");
+        Droga masDroga = new Droga("Aspirina");
 
         Medicamento unMedicamento = new Medicamento("FernetconCola",70);
 
         unMedicamento.agregarDrogra(unaDroga);
         unMedicamento.agregarDrogra(otraDroga);
 
-        unMedicamento.mostrarTodasLasDrogras();
+        //  unMedicamento.mostrarTodasLasDrogras();
+
+        unMedicamento.verificarAlergia(masDroga);
+        unMedicamento.verificarAlergia(otraDroga);
     }
 }
